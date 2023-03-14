@@ -36,6 +36,8 @@ jobs:
         run: |
           make
           make stream
+          models/download-ggml-model.sh base.en
+          ./main -f samples/jfk.wav
 
   ubuntu-latest-gcc:
     runs-on: ubuntu-latest
