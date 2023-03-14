@@ -47,6 +47,8 @@ jobs:
         run: |
           make
           make stream
+          models/download-ggml-model.sh base.en
+          ./main -f samples/jfk.wav
 
   freeBSD-latest:
     runs-on: macos-12
